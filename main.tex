@@ -9,6 +9,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{hyperref}
+\usepackage[numbers]{natbib}
 
 \definecolor{arbg}{HTML}{F6F8FB}
 \definecolor{artext}{HTML}{1F2933}
@@ -112,6 +113,14 @@
   \end{enumerate}
 \end{frame}
 
+\begin{frame}{Concrete Example}
+  \begin{itemize}
+    \item Karpathy's recent \texttt{autoresearch} repository turns this loop into a concrete single-agent workflow over a small LLM training setup \citep{karpathy2026autoresearch}.
+    \item The agent edits the training code, runs a bounded experiment, keeps improvements, and iterates.
+    \item That makes it a useful reference point for discussing where autonomous research is already practical.
+  \end{itemize}
+\end{frame}
+
 \begin{frame}{Open Questions}
   \begin{itemize}
     \item How should agents evaluate uncertainty before taking expensive actions?
@@ -123,9 +132,15 @@
 \begin{frame}{Next Steps}
   \begin{itemize}
     \item Replace example slides with project-specific claims, case studies, and results.
-    \item Add citations, diagrams, and benchmarks once the research narrative is settled.
-    \item Extend the compile workflow if the deck grows to include figures or bibliography support.
+    \item Expand the citation set, diagrams, and benchmarks once the research narrative is settled.
+    \item Extend the compile workflow further if the deck grows to include figures or custom assets.
   \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{References}
+  \footnotesize
+  \bibliographystyle{plainnat}
+  \bibliography{references}
 \end{frame}
 
 \end{document}
