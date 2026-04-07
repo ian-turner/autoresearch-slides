@@ -1,0 +1,131 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usetheme{default}
+\usecolortheme{default}
+\useinnertheme{rectangles}
+\setbeamertemplate{navigation symbols}{}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{hyperref}
+
+\definecolor{arbg}{HTML}{F6F8FB}
+\definecolor{artext}{HTML}{1F2933}
+\definecolor{arblue}{HTML}{204B76}
+\definecolor{arteal}{HTML}{2C7A7B}
+\definecolor{araccent}{HTML}{D9A441}
+
+\setbeamercolor{background canvas}{bg=arbg}
+\setbeamercolor{normal text}{fg=artext,bg=arbg}
+\setbeamercolor{structure}{fg=arblue}
+\setbeamercolor{frametitle}{fg=white,bg=arblue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subtitle}{fg=arbg}
+\setbeamercolor{author}{fg=artext}
+\setbeamercolor{date}{fg=artext}
+\setbeamercolor{block title}{fg=white,bg=arteal}
+\setbeamercolor{block body}{fg=artext,bg=white}
+\setbeamercolor{footline}{fg=arbg,bg=arblue}
+\setbeamercolor{item projected}{fg=white,bg=arteal}
+
+\setbeamerfont{title}{series=\bfseries,size=\LARGE}
+\setbeamerfont{subtitle}{size=\large}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{block title}{series=\bfseries}
+
+\setbeamertemplate{itemize item}{\color{arteal}\large\textbullet}
+\setbeamertemplate{itemize subitem}{\color{araccent}\normalsize\textbullet}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+\setbeamertemplate{title page}{
+  \vspace*{0.08\paperheight}
+  \begin{center}
+  \begin{beamercolorbox}[wd=0.8\paperwidth,sep=1.2em,rounded=true,shadow=false]{frametitle}
+    {\raggedright\usebeamerfont{title}\inserttitle\par}
+    \vspace{0.35em}
+    {\raggedright\usebeamerfont{subtitle}\insertsubtitle\par}
+  \end{beamercolorbox}
+  \end{center}
+
+  \vspace{1.5em}
+  {\color{araccent}\rule{0.22\paperwidth}{1.5pt}}
+
+  \vfill
+
+  \begin{flushleft}
+    {\usebeamerfont{author}\insertauthor\par}
+    \vspace{0.35em}
+    {\usebeamerfont{date}\insertdate\par}
+  \end{flushleft}
+}
+
+\setbeamertemplate{footline}{
+  \leavevmode
+  \hbox{
+    \hspace*{0.02\paperwidth}
+    \begin{beamercolorbox}[wd=0.96\paperwidth,ht=2.8ex,dp=1.2ex,leftskip=0.8em,rightskip=0.8em]{footline}
+      \insertshorttitle\hfill\insertframenumber
+    \end{beamercolorbox}
+  }
+}
+
+\title{Autoresearch}
+\subtitle{Autonomous Research and Software Development with LLM Agents}
+\author{Ian Turner}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Why Autoresearch?}
+  \begin{itemize}
+    \item Large language models can already synthesize literature, write code, and iterate on plans.
+    \item Agent scaffolding turns isolated model calls into longer-running workflows with memory and tools.
+    \item The core question is where autonomy creates real leverage and where humans still need to stay in the loop.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Working Definition}
+  \begin{block}{Autoresearch}
+    The use of LLM-driven agents to perform meaningful parts of the research and engineering loop with limited direct supervision.
+  \end{block}
+
+  \vspace{0.75em}
+
+  \begin{itemize}
+    \item Gather context from papers, code, logs, and experiments.
+    \item Produce artifacts such as summaries, implementations, or evaluations.
+    \item Decide what to do next based on intermediate results.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Typical Loop}
+  \begin{enumerate}
+    \item Define an objective and success criteria.
+    \item Decompose the work into research, implementation, and evaluation tasks.
+    \item Use agents to collect evidence and produce candidate outputs.
+    \item Review results, update the plan, and repeat.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Open Questions}
+  \begin{itemize}
+    \item How should agents evaluate uncertainty before taking expensive actions?
+    \item Which parts of software development can be reliably delegated end to end?
+    \item What monitoring and control surfaces make autonomous systems auditable?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Next Steps}
+  \begin{itemize}
+    \item Replace example slides with project-specific claims, case studies, and results.
+    \item Add citations, diagrams, and benchmarks once the research narrative is settled.
+    \item Extend the compile workflow if the deck grows to include figures or bibliography support.
+  \end{itemize}
+\end{frame}
+
+\end{document}
