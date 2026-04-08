@@ -82,63 +82,41 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Why Autoresearch?}
-  \begin{itemize}
-    \item Large language models can already synthesize literature, write code, and iterate on plans.
-    \item Agent scaffolding turns isolated model calls into longer-running workflows with memory and tools.
-    \item The core question is where autonomy creates real leverage and where humans still need to stay in the loop.
-  \end{itemize}
+\begin{frame}{Table of Contents}
+  \tableofcontents
 \end{frame}
 
-\begin{frame}{Working Definition}
-  \begin{block}{Autoresearch}
-    The use of LLM-driven agents to perform meaningful parts of the research and engineering loop with limited direct supervision.
-  \end{block}
+\section{Recent LLM Progress}
 
-  \vspace{0.75em}
-
-  \begin{itemize}
-    \item Gather context from papers, code, logs, and experiments.
-    \item Produce artifacts such as summaries, implementations, or evaluations.
-    \item Decide what to do next based on intermediate results.
-  \end{itemize}
+\begin{frame}{Recent LLM Progress}
+  \centering
+  \Large Recent LLM Progress
 \end{frame}
 
-\begin{frame}{Typical Loop}
-  \begin{enumerate}
-    \item Define an objective and success criteria.
-    \item Decompose the work into research, implementation, and evaluation tasks.
-    \item Use agents to collect evidence and produce candidate outputs.
-    \item Review results, update the plan, and repeat.
-  \end{enumerate}
+\section{Kinds of Autoresearch}
+
+\begin{frame}{Kinds of Autoresearch}
+  \centering
+  \Large Kinds of Autoresearch
 \end{frame}
 
-\begin{frame}{Concrete Example}
-  \begin{itemize}
-    \item Karpathy's recent \texttt{autoresearch} repository turns this loop into a concrete single-agent workflow over a small LLM training setup \citep{karpathy2026autoresearch}.
-    \item The agent edits the training code, runs a bounded experiment, keeps improvements, and iterates.
-    \item That makes it a useful reference point for discussing where autonomous research is already practical.
-  \end{itemize}
+\section{Autoresearch Techniques}
+
+\begin{frame}{Autoresearch Techniques}
+  \centering
+  \Large Autoresearch Techniques
 \end{frame}
 
-\begin{frame}{Open Questions}
-  \begin{itemize}
-    \item How should agents evaluate uncertainty before taking expensive actions?
-    \item Which parts of software development can be reliably delegated end to end?
-    \item What monitoring and control surfaces make autonomous systems auditable?
-  \end{itemize}
-\end{frame}
+\section{Examples}
 
-\begin{frame}{Next Steps}
-  \begin{itemize}
-    \item Replace example slides with project-specific claims, case studies, and results.
-    \item Expand the citation set, diagrams, and benchmarks once the research narrative is settled.
-    \item Extend the compile workflow further if the deck grows to include figures or custom assets.
-  \end{itemize}
+\begin{frame}{Examples}
+  \centering
+  \Large Examples
 \end{frame}
 
 \begin{frame}[allowframebreaks]{References}
   \footnotesize
+  \nocite{*}
   \bibliographystyle{plainnat}
   \bibliography{references}
 \end{frame}
