@@ -15,9 +15,11 @@ Papers organized by topic. BibTeX keys reference `references.bib`.
 
 ### The AI Scientist v2 (`yamada2025aiscientistv2`)
 - arXiv:2504.08066 — Sakana AI, April 2025
+- Local PDF: `resources/2504.08066.pdf`
 - Improves v1 with agentic tree search; eliminates human code templates; generalizes across ML domains.
-- First fully AI-generated paper to pass peer review at a workshop venue.
+- First fully AI-generated paper to pass peer review at a workshop venue (1 of 3 submissions accepted at ICLR 2025 ICBINB workshop).
 - **Relevance:** Shows the loop is closing — not just writing papers but having them accepted.
+- **Notes:** `notes/ai-scientist-v2.md`
 
 ### ResearchAgent (`baek2025researchagent`)
 - arXiv:2404.07738 — NAACL 2025
@@ -25,9 +27,11 @@ Papers organized by topic. BibTeX keys reference `references.bib`.
 - **Relevance:** Scalable literature review automation; supports the "Tools and Techniques" section on RAG and knowledge graphs.
 
 ### Agentic AI for Scientific Discovery (`schmidgall2025agenticscience`)
-- arXiv:2503.08979 — March 2025
-- Broad survey covering hypothesis generation, experimental design, data analysis, and manuscript prep for agentic systems.
-- **Relevance:** Good structural overview; useful for framing the full autoresearch pipeline in the talk.
+- arXiv:2503.08979 — ICLR 2025
+- Local PDF: `resources/2503.08979.pdf`
+- Broad survey covering hypothesis generation, experimental design, data analysis, and manuscript prep for agentic systems across chemistry, biology, materials science, and ML.
+- **Relevance:** Good structural overview; useful for framing the full autoresearch pipeline in the talk. Figure 1 (7-stage lifecycle diagram) is the clearest general definition of autoresearch.
+- **Notes:** `notes/agentic-ai-scientific-discovery.md`
 
 ---
 
