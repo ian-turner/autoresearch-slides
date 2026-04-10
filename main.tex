@@ -182,7 +182,7 @@
     \item \textbf{Aider} (LLM coding agent) implements plan-directed code changes; runs experiments automatically
     \item \textbf{v1 (AI Scientist)}: linear loop --- implement $\to$ run $\to$ analyze $\to$ re-plan, up to 5 iterations
     \item \textbf{v2 (AI Scientist-v2)}: tree search --- parallel branches, best-first selection guided by an LLM evaluator; vision-language model (VLM) checks generated figures
-    \item Model comparison on v1 (best $\to$ worst): Claude Sonnet 3.5, GPT-4o, DeepSeek Coder, Llama-3.1 405B; full run costs \textasciitilde\$10
+    \item Model comparison on v1 (best $\to$ worst): Claude Sonnet 3.5, GPT-4o, DeepSeek Coder, Llama-3.1 405B
   \end{itemize}
   \vfill
   \footnotesize\citep{lu2024aiscientist, yamada2025aiscientistv2}
@@ -210,14 +210,14 @@
     \item End-to-end machine learning autoresearch: idea generation $\to$ experiments $\to$ paper \citep{lu2024aiscientist}
     \item \textbf{Existence proof}: first AI-generated paper accepted at peer review\\
           (ICLR 2025 ICBINB workshop; 1 of 3 submissions accepted) \citep{yamada2025aiscientistv2}
-    \item Cost: \textbf{\$15 per paper end-to-end}
+    \item Cost: \textbf{under \$15 per paper end-to-end}
     \item Human role: configure the system once, then step away
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Case Study 2: Coscientist}
   \begin{itemize}
-    \item GPT-4 agent equipped with four tools: web search, documentation reader, code executor, robotic lab controller \citep{boiko2023coscientist}
+    \item Agent built on GPT-4 (planning) and GPT-3.5 (web search), equipped with four modules: web search, documentation reader, code executor, robotic lab controller \citep{boiko2023coscientist}
     \item Task: autonomously design \textit{and physically execute} a palladium-catalyzed cross-coupling reaction
     \item \textbf{Key milestone}: crossed the digital--physical boundary --- autonomous wet-lab experiment execution, not just writing
     \item Human role: define the research goal, then step away
