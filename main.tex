@@ -163,14 +163,12 @@
     \item Report Writing \& Synthesis
     \item Paper Review
   \end{enumerate}
-  \vfill
-  \footnotesize\textit{Literature review is the most consistently failing stage across current systems.} \citep{schmidgall2025agenticscience}
 \end{frame}
 
 \begin{frame}{Stage 1: Idea Generation}
   \begin{itemize}
     \item LLM brainstorms ideas from a research prompt or template
-    \item \textbf{Novelty filtering}: Semantic Scholar API rejects ideas too similar to existing work
+    \item \textbf{Novelty filtering}: system queries Semantic Scholar API and filters out ideas too similar to existing work
     \item \textbf{Scoring rubric}: each idea rated 1--10 on Interestingness, Feasibility, and Novelty
     \item Multiple rounds of \textbf{chain-of-thought + self-reflection} refine and diversify the idea set
     \item A running archive prevents re-proposing already-explored ideas
@@ -183,8 +181,8 @@
   \begin{itemize}
     \item \textbf{Aider} (LLM coding agent) implements plan-directed code changes; runs experiments automatically
     \item \textbf{v1 (AI Scientist)}: linear loop --- implement $\to$ run $\to$ analyze $\to$ re-plan, up to 5 iterations
-    \item \textbf{v2 (AI Scientist-v2)}: tree search --- parallel branches, best-first selection guided by an LLM evaluator; VLM checks generated figures
-    \item Model comparison on v1 (best $\to$ worst): Claude Sonnet 3.5, GPT-4o, DeepSeek Coder (\textasciitilde\$10 total), Llama-3.1 405B
+    \item \textbf{v2 (AI Scientist-v2)}: tree search --- parallel branches, best-first selection guided by an LLM evaluator; vision-language model (VLM) checks generated figures
+    \item Model comparison on v1 (best $\to$ worst): Claude Sonnet 3.5, GPT-4o, DeepSeek Coder, Llama-3.1 405B; full run costs \textasciitilde\$10
   \end{itemize}
   \vfill
   \footnotesize\citep{lu2024aiscientist, yamada2025aiscientistv2}
@@ -196,8 +194,7 @@
     \item \textbf{Semantic Scholar API} retrieves references for the related work section
     \item \textbf{Automated peer review}: GPT-4o reviewer with 5-round self-reflection and 5 ensembled reviews
     \item Reviewer accuracy: \textbf{65\% balanced accuracy} vs.\ 66\% for human reviewers (near-human) \citep{lu2024aiscientist}
-    \item Cost: \textbf{\$0.25--\$0.50 per review}; \textbf{\$15 per full paper}
-    \item Milestone: first AI-generated paper accepted at a peer-reviewed venue (ICLR 2025 workshop, 1 of 3 submissions) \citep{yamada2025aiscientistv2}
+    \item Cost: \textbf{\$0.25--\$0.50 per review}; \textbf{under \$15 per full paper}
   \end{itemize}
 \end{frame}
 
@@ -210,7 +207,7 @@
 
 \begin{frame}{Case Study 1: The AI Scientist}
   \begin{itemize}
-    \item End-to-end ML autoresearch: idea generation $\to$ experiments $\to$ paper \citep{lu2024aiscientist}
+    \item End-to-end machine learning autoresearch: idea generation $\to$ experiments $\to$ paper \citep{lu2024aiscientist}
     \item \textbf{Existence proof}: first AI-generated paper accepted at peer review\\
           (ICLR 2025 ICBINB workshop; 1 of 3 submissions accepted) \citep{yamada2025aiscientistv2}
     \item Cost: \textbf{\$15 per paper end-to-end}
@@ -230,7 +227,7 @@
 \begin{frame}{Case Study 3: The Virtual Lab}
   \begin{itemize}
     \item Goal: design SARS-CoV-2 nanobodies targeting JN.1/KP.3 variants \citep{swanson2024virtuallab}
-    \item \textbf{Structure}: human PI writes meeting agendas; LLM PI agent leads specialist agents (biologist, CS, critic); critic provides feedback; PI synthesizes
+    \item \textbf{Structure}: human PI writes meeting agendas; LLM PI agent leads specialist agents (immunologist, ML specialist, computational biologist, critic)
     \item Human involvement: $\approx$\textbf{1\% of interactions} --- but human controls direction at every meeting boundary
     \item Result: 92 nanobodies designed computationally; 2 showed improved binding \textit{and} maintained ancestral-spike binding; published in \textit{Nature} 2025
     \item \textbf{Key contrast}: fully autonomous systems hand off execution entirely; Virtual Lab keeps the human as PI --- agenda-setting and validation stay human
@@ -252,8 +249,6 @@
     \item \textbf{Brittleness on novel tasks}: agents perform well on well-defined problems, struggle with genuinely new hypotheses \citep{feng2026visionary}
     \item \textbf{Workshop-level, not conference-level}: 1 of 3 AI Scientist-v2 papers accepted --- at a workshop (60--80\% acceptance rate), not a main-track venue \citep{yamada2025aiscientistv2}
   \end{itemize}
-  \vfill
-  \footnotesize\citep{llmsnotscientists2025}
 \end{frame}
 
 \begin{frame}{Systemic Risks}
@@ -284,13 +279,12 @@
     \item \textbf{Systemic risks are underspecified}: verification asymmetry, literature
           flooding, and disclosure norms are unsolved --- the technology is ahead of the norms
     \item The research lifecycle is a \textbf{pipeline, not a single task}; current systems
-          fail most predictably at the beginning (literature review) and end (genuine novelty)
+          fail most predictably on literature review and on generating genuinely novel hypotheses
   \end{itemize}
 \end{frame}
 
 \begin{frame}[allowframebreaks]{References}
   \footnotesize
-  \nocite{*}
   \bibliographystyle{plainnat}
   \bibliography{references}
 \end{frame}
