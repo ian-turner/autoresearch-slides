@@ -10,6 +10,7 @@
 \usepackage{lmodern}
 \usepackage{hyperref}
 \usepackage[numbers]{natbib}
+\usepackage{tikz}
 
 \definecolor{arbg}{HTML}{F6F8FB}
 \definecolor{artext}{HTML}{1F2933}
@@ -102,14 +103,48 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{A Spectrum of AI-Assisted Research}
-  \begin{itemize}
-    \item \textbf{Traditional research} \hfill human owns every step
-    \item \textbf{Tool-assisted} \hfill search engines, code editors, statistics packages
-    \item \textbf{AI for Science} \hfill AI solves targeted sub-tasks (AlphaFold, Copilot)
-    \item \textbf{Vibe researching} \hfill human orchestrates; agents execute \citep{feng2026visionary}
-    \item \textbf{Autoresearch} \hfill fully autonomous, end-to-end discovery
-  \end{itemize}
+\begin{frame}{The Spectrum of AI-Assisted Research}
+  \vspace{2em}
+  \begin{center}
+  \begin{tikzpicture}[x=\linewidth, y=1cm]
+    \shade[left color=gray!25, right color=arblue]
+      (0, 0) rectangle (1, 0.4);
+
+    % Above: Tool-assisted, Vibe Researching
+    \draw[gray!60] (0.25, 0.4) -- (0.25, 0.6);
+    \draw[gray!60] (0.75, 0.4) -- (0.75, 0.6);
+    \node[above, align=left, text width=3.8cm, draw=arblue, rounded corners, inner sep=4pt] at (0.25, 0.6) {
+      \textbf{Tool-assisted}\\[0.15em]
+      \scriptsize\textbullet\ Software tools extend human reach\\
+      \textbullet\ Search, code editors, stats packages
+    };
+    \node[above, align=left, text width=3.8cm, draw=arblue, rounded corners, inner sep=4pt] at (0.75, 0.6) {
+      \textbf{Vibe Researching}\\[0.15em]
+      \scriptsize\textbullet\ Human orchestrates; agents execute\\
+      \textbullet\ Lit.\ review, coding, drafting \citep{feng2026visionary}
+    };
+
+    % Below: Traditional, AI for Science, Autoresearch
+    \draw[gray!60] (0,   0) -- (0,   -0.2);
+    \draw[gray!60] (0.5, 0) -- (0.5, -0.2);
+    \draw[gray!60] (1.0, 0) -- (1.0, -0.2);
+    \node[below, align=left, text width=3.8cm, draw=arblue, rounded corners, inner sep=4pt, anchor=north west] at (0, -0.2) {
+      \textbf{Traditional}\\[0.15em]
+      \scriptsize\textbullet\ Human-driven end-to-end\\
+      \textbullet\ No AI involvement
+    };
+    \node[below, align=left, text width=3.8cm, draw=arblue, rounded corners, inner sep=4pt] at (0.5, -0.2) {
+      \textbf{AI for Science}\\[0.15em]
+      \scriptsize\textbullet\ AI solves targeted sub-tasks\\
+      \textbullet\ AlphaFold, GitHub Copilot
+    };
+    \node[below, align=left, text width=3.8cm, draw=arblue, rounded corners, inner sep=4pt, anchor=north east] at (1.0, -0.2) {
+      \textbf{Autoresearch}\\[0.15em]
+      \scriptsize\textbullet\ Fully autonomous end-to-end\\
+      \textbullet\ Idea $\to$ experiment $\to$ paper \citep{lu2024aiscientist}
+    };
+  \end{tikzpicture}
+  \end{center}
 \end{frame}
 
 \section{The Research Pipeline}
