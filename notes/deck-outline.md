@@ -3,9 +3,9 @@
 - The deck currently contains a title slide, a table of contents slide, and one minimal divider slide for each section.
 - The current section order is:
   - What Is Autoresearch?
-  - Tools and Techniques
+  - The Research Pipeline
+  - Case Studies
   - Limitations and Risks
-  - Examples
   - Conclusions
 - `main.tex` keeps a dedicated `Table of Contents` slide immediately after the title slide.
 - Each section has a single divider frame so the section appears in the rendered deck and in Beamer's table of contents.
