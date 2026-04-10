@@ -167,6 +167,40 @@
   \footnotesize\textit{Literature review is the most consistently failing stage across current systems.} \citep{schmidgall2025agenticscience}
 \end{frame}
 
+\begin{frame}{Stage 1: Idea Generation}
+  \begin{itemize}
+    \item LLM brainstorms ideas from a research prompt or template
+    \item \textbf{Novelty filtering}: Semantic Scholar API rejects ideas too similar to existing work
+    \item \textbf{Scoring rubric}: each idea rated 1--10 on Interestingness, Feasibility, and Novelty
+    \item Multiple rounds of \textbf{chain-of-thought + self-reflection} refine and diversify the idea set
+    \item A running archive prevents re-proposing already-explored ideas
+  \end{itemize}
+  \vfill
+  \footnotesize\citep{lu2024aiscientist}
+\end{frame}
+
+\begin{frame}{Stage 2: Experimentation}
+  \begin{itemize}
+    \item \textbf{Aider} (LLM coding agent) implements plan-directed code changes; runs experiments automatically
+    \item \textbf{v1 (AI Scientist)}: linear loop --- implement $\to$ run $\to$ analyze $\to$ re-plan, up to 5 iterations
+    \item \textbf{v2 (AI Scientist-v2)}: tree search --- parallel branches, best-first selection guided by an LLM evaluator; VLM checks generated figures
+    \item Model comparison on v1 (best $\to$ worst): Claude Sonnet 3.5, GPT-4o, DeepSeek Coder (\textasciitilde\$10 total), Llama-3.1 405B
+  \end{itemize}
+  \vfill
+  \footnotesize\citep{lu2024aiscientist, yamada2025aiscientistv2}
+\end{frame}
+
+\begin{frame}{Stage 3: Paper Writing \& Review}
+  \begin{itemize}
+    \item Paper written \textbf{section-by-section} by the LLM; LaTeX errors fed back for automated fixing
+    \item \textbf{Semantic Scholar API} retrieves references for the related work section
+    \item \textbf{Automated peer review}: GPT-4o reviewer with 5-round self-reflection and 5 ensembled reviews
+    \item Reviewer accuracy: \textbf{70\% accept/reject} vs.\ 66\% for human reviewers \citep{lu2024aiscientist}
+    \item Cost: \textbf{\$0.25--\$0.50 per review}; \textbf{\$15 per full paper}
+    \item Milestone: first AI-generated paper accepted at a peer-reviewed venue (ICLR 2025 workshop, 1 of 3 submissions) \citep{yamada2025aiscientistv2}
+  \end{itemize}
+\end{frame}
+
 \section{Case Studies}
 
 \begin{frame}{Case Studies}
