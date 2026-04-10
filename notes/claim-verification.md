@@ -1,4 +1,8 @@
-# Claim Verification Audit
+# Claim Verification Audit — Session 1
+
+**Date:** 2026-04-08
+
+**Next audit:** [Session 2 — 2026-04-09](claim-verification-2.md) (Coscientist + Virtual Lab primary PDFs)
 
 Verified against local PDFs where available. PDF coverage:
 - `resources/2408.06292.pdf` — AI Scientist v1 (`lu2024aiscientist`)
